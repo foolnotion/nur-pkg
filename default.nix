@@ -16,6 +16,8 @@
 
   asmjit = pkgs.callPackage ./pkgs/asmjit { };
 
+  cpp-sort = pkgs.callPackage ./pkgs/cpp-sort { };
+
   eli5 = pkgs.python39Packages.callPackage ./pkgs/eli5 { };
 
   eovim = pkgs.callPackage ./pkgs/eovim { };
