@@ -24,6 +24,8 @@
 
   linasm = pkgs.callPackage ./pkgs/linasm { };
 
+  pareto = pkgs.python39Packages.callPackage ./pkgs/pareto { };
+
   pmlb = pkgs.python39Packages.callPackage ./pkgs/pmlb { };
 
   taskflow = pkgs.callPackage ./pkgs/taskflow { };
