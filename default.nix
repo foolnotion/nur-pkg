@@ -24,6 +24,8 @@
 
   linasm = pkgs.callPackage ./pkgs/linasm { };
 
+  pmlb = pkgs.python39Packages.callPackage ./pkgs/pmlb { };
+
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
 }
