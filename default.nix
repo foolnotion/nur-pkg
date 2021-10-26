@@ -26,6 +26,8 @@
 
   pmlb = pkgs.python39Packages.callPackage ./pkgs/pmlb { };
 
+  taskflow = pkgs.callPackage ./pkgs/taskflow { };
+
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
 }
