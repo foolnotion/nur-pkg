@@ -16,6 +16,8 @@
 
   asmjit = pkgs.callPackage ./pkgs/asmjit { };
 
+  cmake-init = pkgs.python39Packages.callPackage ./pkgs/cmake-init { };
+
   cpp-sort = pkgs.callPackage ./pkgs/cpp-sort { };
 
   eli5 = pkgs.python39Packages.callPackage ./pkgs/eli5 { };
