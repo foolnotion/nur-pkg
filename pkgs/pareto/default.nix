@@ -13,10 +13,10 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ git cmake ];
 
-  buildInputs = [ pythonPackages.pybind11 ];
+  #buildInputs = [ pythonPackages.pybind11 ];
 
   preConfigure = ''
-      cmakeFlags="$cmakeFlags -DCMAKE_INSTALL_PREFIX=$out -DCMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY=ON -DBUILD_PYTHON_BINDING=ON -DBUILD_EXAMPLES=OFF -DBUILD_TESTS=OFF" 
+      cmakeFlags="$cmakeFlags -DCMAKE_INSTALL_PREFIX=$out -DCMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY=ON -DBUILD_PYTHON_BINDING=OFF -DBUILD_EXAMPLES=OFF -DBUILD_TESTS=OFF"
   '';
 
   doCheck = false;
