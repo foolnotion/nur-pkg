@@ -22,6 +22,8 @@
 
   eovim = pkgs.callPackage ./pkgs/eovim { };
 
+  linasm = pkgs.callPackage ./pkgs/linasm { };
+
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
 }
