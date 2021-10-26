@@ -15,6 +15,9 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   asmjit = pkgs.callPackage ./pkgs/asmjit { };
+
+  eli5 = pkgs.python39Packages.callPackage ./pkgs/eli5 { };
+
   eovim = pkgs.callPackage ./pkgs/eovim { };
 
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
