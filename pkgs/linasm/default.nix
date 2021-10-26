@@ -1,8 +1,8 @@
 { stdenv
 , lib
-, fetchurl 
+, fetchurl
 , fasm
-, pkg-config }: 
+, pkg-config }:
 
 stdenv.mkDerivation rec {
   pname = "linasm";
@@ -23,7 +23,7 @@ stdenv.mkDerivation rec {
 
   postFixup = ''
     mkdir $out/lib/pkgconfig
-    echo "prefix=$out 
+    echo "prefix=$out
 exec_prefix=$out
 libdir=$out/lib
 includedir=$out/include

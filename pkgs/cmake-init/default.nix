@@ -3,6 +3,7 @@ buildPythonPackage rec {
   pname = "cmake-init";
   version = "0.22.0";
   format = "wheel";
+  dist = "py3";
 
   src = fetchPypi {
     inherit version format;
