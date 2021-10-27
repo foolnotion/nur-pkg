@@ -24,6 +24,8 @@
 
   eovim = pkgs.callPackage ./pkgs/eovim { };
 
+  keyd = pkgs.callPackage ./pkgs/keyd { };
+
   linasm = pkgs.callPackage ./pkgs/linasm { };
 
   mathpresso = pkgs.callPackage ./pkgs/mathpresso { };
