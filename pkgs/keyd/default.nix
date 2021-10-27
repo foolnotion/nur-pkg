@@ -8,8 +8,8 @@ in stdenv.mkDerivation rec {
 
   src = fetchgit {
     url = "https://github.com/rvaiya/keyd.git";
-    rev = "refs/tags/v${version}";
-    sha256 = "sha256-E9WHCJxTGwvkrwm4zXFye53nJU9GFtovIxRrpoL/VtM=";
+    rev = "c7ee83350dc0064e9f03a780995efce18266ea4d";
+    sha256 = "sha256-lwEO0SWbsshSY2/M39fay5OlJgRBScIj6Tt7zz0U63s=";
   };
 
   buildInputs = [ git udev ];
@@ -17,7 +17,7 @@ in stdenv.mkDerivation rec {
   patches = [ ./keyd.patch ];
 
   buildPhase = ''
-    make LOCK_FILE=/tmp/keyd.lock LOG_FILE=/tmp/keyd.log
+    make VERBOSE=1 LOCK_FILE=/tmp/keyd.lock LOG_FILE=/tmp/keyd.log
   '';
 
   installPhase = ''
