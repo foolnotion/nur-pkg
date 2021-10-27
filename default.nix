@@ -26,6 +26,8 @@
 
   linasm = pkgs.callPackage ./pkgs/linasm { };
 
+  mathpresso = pkgs.callPackage ./pkgs/mathpresso { };
+
   pareto = pkgs.python39Packages.callPackage ./pkgs/pareto { };
 
   pmlb = pkgs.python39Packages.callPackage ./pkgs/pmlb { };
