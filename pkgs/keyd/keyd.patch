@@ -13,6 +13,8 @@ index 86b95d5..b42b495 100644
 +          config_dir = CONFIG_DIR;
 +      }
 +
++      printf("config dir: %s\n", config_dir);
++
 +      DIR *dh = opendir(config_dir);
  
  	if(!dh) {
