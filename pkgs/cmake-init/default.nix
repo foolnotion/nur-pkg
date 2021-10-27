@@ -3,11 +3,11 @@ buildPythonPackage rec {
   pname = "cmake-init";
   version = "0.22.0";
   format = "wheel";
-  dist = "py3";
 
   src = fetchPypi {
     inherit version format;
     pname = "cmake_init";
+    dist = "py3";
     python = "py3";
     sha256 = "sha256-tDC7PNxr5w7efvPPMgcrVYh3O/48f3RW+84CVTjEblo=";
   };
