@@ -20,6 +20,7 @@ buildPythonPackage rec {
 
   meta = with lib; {
     description = "Modern CMake (3.14+) project initializer that generates FetchContent-ready projects, separates consumer and developer targets, provides install rules with proper relocatable CMake packages.";
+    homepage = "https://github.com/friendlyanon/cmake-init";
     license = licenses.gpl3;
     platforms = platforms.unix;
   };
