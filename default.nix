@@ -26,6 +26,8 @@
 
   keyd = pkgs.callPackage ./pkgs/keyd { };
 
+  librewolf = pkgs.callPackage ./pkgs/librewolf { };
+
   linasm = pkgs.callPackage ./pkgs/linasm { };
 
   mathpresso = pkgs.callPackage ./pkgs/mathpresso { };
