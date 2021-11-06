@@ -2,12 +2,12 @@
 
 let
   pname = "librewolf-bin";
-  version = "93.0-1";
+  version = "94.0-1";
   name = "${pname}-${version}";
 
   src = fetchurl {
     url = "https://gitlab.com/api/v4/projects/24386000/packages/generic/librewolf/${version}/LibreWolf.x86_64.AppImage";
-    sha256 = "sha256-1Rxv1dZ/kwhhHdvm34XphnbQlDXTkSVy9pjQ525S4eo=";
+    sha256 = "sha256-RoZ/Tn3CY95/+E5rkTF/vbuhJQ9EOndmF3P78ciAesY=";
   };
 
   appimageContents = appimageTools.extractType2 { inherit name src; };
