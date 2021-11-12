@@ -16,6 +16,8 @@
 
   asmjit = pkgs.callPackage ./pkgs/asmjit { };
 
+  autodiff = pkgs.callPackage ./pkgs/autodiff { };
+
   cmake-init = pkgs.python39Packages.callPackage ./pkgs/cmake-init { };
 
   cpp-sort = pkgs.callPackage ./pkgs/cpp-sort { };
