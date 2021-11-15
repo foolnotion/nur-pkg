@@ -41,4 +41,6 @@
   taskflow = pkgs.callPackage ./pkgs/taskflow { };
 
   vectorclass = pkgs.callPackage ./pkgs/vectorclass { };
+
+  vstat = pkgs.callPackage ./pkgs/vstat { };
 }
