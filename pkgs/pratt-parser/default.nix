@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchFromGitHub, pkgs, cmake, doctest }:
+{ lib, stdenv, fetchFromGitHub, cmake, doctest, fast_float, robin-hood-hashing }:
 
 stdenv.mkDerivation rec {
   pname = "pratt-parser";
@@ -14,8 +14,8 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ cmake ];
 
   buildInputs = [
-    pkgs.nur.repos.foolnotion.fast_float
-    pkgs.nur.repos.foolnotion.robin-hood-hashing
+    fast_float
+    robin-hood-hashing
   ];
 
   meta = with lib; {
