@@ -15,7 +15,7 @@ stdenv.mkDerivation rec {
 
   meta = with lib; {
     description = "Fast header-only implementations for the C++ from_chars functions for float and double types.";
-    homepage = "https://github.com/Morwenn/cpp-sort";
+    homepage = "https://github.com/fastfloat/fast_float";
     license = licenses.asl20;
     platforms = platforms.all;
     #maintainers = with maintainers; [ foolnotion ];
