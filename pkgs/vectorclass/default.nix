@@ -17,7 +17,6 @@ stdenv.mkDerivation rec {
     '';
 
   postFixup = ''
-    mkdir -p $out/share/vectorclass/cmake
     mkdir -p $out/lib/pkgconfig
     echo "
 prefix=$out/include/vectorclass
