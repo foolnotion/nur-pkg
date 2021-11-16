@@ -40,6 +40,8 @@
 
   pmlb = pkgs.python39Packages.callPackage ./pkgs/pmlb { };
 
+  robin-hood-hashing = pkgs.callPackage ./pkgs/robin-hood-hashing { };
+
   taskflow = pkgs.callPackage ./pkgs/taskflow { };
 
   vectorclass = pkgs.callPackage ./pkgs/vectorclass { };
