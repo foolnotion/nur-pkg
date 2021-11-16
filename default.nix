@@ -26,6 +26,8 @@
 
   eovim = pkgs.callPackage ./pkgs/eovim { };
 
+  fast_float = pkgs.callPackage ./pkgs/fast_float { };
+
   keyd = pkgs.callPackage ./pkgs/keyd { };
 
   librewolf = pkgs.callPackage ./pkgs/librewolf { };
