@@ -40,6 +40,8 @@
 
   pmlb = pkgs.python39Packages.callPackage ./pkgs/pmlb { };
 
+  pratt-parser = pkgs.callPackage ./pkgs/pratt-parser { };
+
   robin-hood-hashing = pkgs.callPackage ./pkgs/robin-hood-hashing { };
 
   taskflow = pkgs.callPackage ./pkgs/taskflow { };
