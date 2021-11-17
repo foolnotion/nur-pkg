@@ -47,6 +47,8 @@
 
   robin-hood-hashing = pkgs.callPackage ./pkgs/robin-hood-hashing { };
 
+  span-lite = pkgs.callPackage ./pkgs/span-lite { };
+
   taskflow = pkgs.callPackage ./pkgs/taskflow { };
 
   vectorclass = pkgs.callPackage ./pkgs/vectorclass { };
