@@ -14,6 +14,8 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
+  aria-csv = pkgs.callPackage ./pkgs/aria-csv { };
+
   asmjit = pkgs.callPackage ./pkgs/asmjit { };
 
   autodiff = pkgs.callPackage ./pkgs/autodiff { };
