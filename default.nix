@@ -6,13 +6,6 @@
 # commands such as:
 #     nix-build -A mypackage
 
-#{ pkgs ? import <nixpkgs> { } }:
-let
-  nixpkgs = builtins.fetchTarball {
-    url = "https://github.com/NixOS/nixpkgs/archive/refs/heads/master.zip";
-    sha256 = "sha256:0dp4g8860qb6yg68z9ixrnr4fjl6iasgrplq6y612vhr6ywamfx1";
-  };
-in
 { pkgs ? import nixpkgs {} }:
 {
   # The `lib`, `modules`, and `overlay` names are special
