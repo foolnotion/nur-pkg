@@ -1,8 +1,4 @@
-{ stdenv
-, lib
-, fetchurl
-, fasm
-, pkg-config }:
+{ stdenv, lib, fetchurl, fasm, pkg-config }:
 
 stdenv.mkDerivation rec {
   pname = "linasm";
