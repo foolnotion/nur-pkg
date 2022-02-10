@@ -6,8 +6,7 @@
 # commands such as:
 #     nix-build -A mypackage
 
-#{ pkgs ? import <nixpkgs> {} }:
-{ pkgs }: rec {
+{ pkgs ? import <nixpkgs> {} }: rec {
   # The `lib`, `modules`, and `overlay` names are special
   lib = import ./lib { inherit pkgs; }; # functions
   modules = import ./modules; # NixOS modules
