@@ -25,7 +25,7 @@
   xxhash,
   # build options
   useSinglePrecision ? true,
-  buildCliPrograms ? true,
+  buildCliPrograms ? false,
   buildSharedLibs ? true,
   useOpenLibm ? true,
   useJemalloc ? false
