@@ -5,10 +5,12 @@ stdenv.mkDerivation rec {
   pname = "quickcpplib";
   version = "0.1.0.0";
 
-  src = builtins.fetchGit {
-    url = "http://github.com/ned14/quickcpplib";
+  src = fetchFromGitHub {
+    owner = "ned14";
+    repo = "quickcpplib";
     rev = "ef0fe8ecf9951717b63b27447ddcaf5cc8eed6e2";
-    submodules = true;
+    sha256 = "sha256-OYx7p2HCgleexPOZnmkMmY/PwGQsnJI+hwq9b4V+KHU=";
+    fetchSubmodules = true;
   };
 
   nativeBuildInputs = [ cmake ];
