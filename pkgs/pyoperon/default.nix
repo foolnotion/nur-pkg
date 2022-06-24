@@ -11,6 +11,7 @@
   fmt,
   glog,
   operon,
+  openlibm,
   pkg-config,
   pratt-parser,
   pybind11,
@@ -41,6 +42,7 @@ stdenv.mkDerivation rec {
     fast_float
     fmt
     glog
+    openlibm
     operon
     pkg-config
     pratt-parser
