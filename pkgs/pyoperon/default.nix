@@ -22,13 +22,13 @@
 }:
 stdenv.mkDerivation rec {
   pname = "pyoperon";
-  version = "0.1.0";
+  version = "0.1.1";
 
   src = fetchFromGitHub {
     owner = "heal-research";
     repo = "pyoperon";
-    rev = "20127de3d5afe480762b56bc2d09298ffaaa4150";
-    sha256 = "sha256-tunhlBJPFKdqvAUD0S2TpsTJNcrvRcfUzTGW1MoTtvc=";
+    rev = "cc01114920edd42aabd901688ef77c037bced81e";
+    sha256 = "sha256-2NC/qOYRDqcmS0+YzYIJxNS1t5iJtI6TyKKi7q7O3XU=";
   };
 
   nativeBuildInputs = [ cmake ];
@@ -41,6 +41,7 @@ stdenv.mkDerivation rec {
     fmt
     glog
     operon
+    pkg-config
     pratt-parser
     pybind11
     robin-hood-hashing
