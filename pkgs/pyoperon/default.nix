@@ -11,6 +11,7 @@
   fmt,
   glog,
   operon,
+  pkg-config,
   pratt-parser,
   pybind11,
   robin-hood-hashing,
