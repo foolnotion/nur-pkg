@@ -9,7 +9,7 @@ stdenv.mkDerivation rec {
     owner = "ned14";
     repo = "quickcpplib";
     rev = "568e1811edf0f47caafbeb62a4f9fe4e885a0f96";
-    sha256 = "sha256-mPyisDim1jkOfwy2JAT4phNXJtmsN2Ltp8DF8bN2Fag=";
+    sha256 = "sha256-vR5m8AQpP2NO/w1jf8YlvdiuKnGvLoKWzzy/6W7x0NE=";
     fetchSubmodules = true;
   };
 
