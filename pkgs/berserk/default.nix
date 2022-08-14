@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchurl, fetchFromGitHub, glibc }:
+{ lib, stdenv, fetchurl, fetchFromGitHub }:
 
 let
   nnueFile = "berserk-70370ef71611.nn";
