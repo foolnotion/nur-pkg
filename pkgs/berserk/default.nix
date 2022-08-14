@@ -27,6 +27,7 @@ in stdenv.mkDerivation rec {
   installPhase = ''
     mkdir -p $out/bin
     install berserk-${version}* $out/bin/
+    install networks/${nnueFile} $out/bin/
   '';
 
   buildInputs = [ glibc.static ];
