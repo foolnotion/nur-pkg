@@ -29,7 +29,7 @@ appimageTools.wrapType2 rec {
   meta = with lib; {
     description = "Free and Open Source AI Image Upscaler";
     homepage = "https://upscayl.github.io/";
-    maintainers = with maintainers; [ tim ];
+    maintainers = with maintainers; [  ];
     platforms = platforms.linux;
   };
 }
