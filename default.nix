@@ -56,6 +56,8 @@
 
   mdspan = pkgs.callPackage ./pkgs/mdspan { };
 
+  nlr = pkgs.callPackage ./pkgs/nlr { };
+
   pareto = pkgs.python3Packages.callPackage ./pkgs/pareto { };
 
   pegtl = pkgs.callPackage ./pkgs/pegtl { };
