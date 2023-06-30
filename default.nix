@@ -52,6 +52,8 @@
 
   linasm = pkgs.callPackage ./pkgs/linasm { };
 
+  libnano = pkgs.callPackage ./pkgs/libnano { };
+
   mathpresso = pkgs.callPackage ./pkgs/mathpresso { };
 
   mdspan = pkgs.callPackage ./pkgs/mdspan { };
