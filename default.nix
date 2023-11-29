@@ -48,6 +48,8 @@
   expected-lite = pkgs.callPackage ./pkgs/expected-lite { };
 
   fast_float = pkgs.callPackage ./pkgs/fast_float { };
+  
+  fastor = pkgs.callPackage ./pkgs/fastor { };
 
   gch-small-vector = pkgs.callPackage ./pkgs/gch-small-vector { };
 
