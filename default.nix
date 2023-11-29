@@ -26,6 +26,8 @@
 
   cmaketools = pkgs.python3Packages.callPackage ./pkgs/cmaketools { };
 
+  cpp-flux = pkgs.callPackage ./pkgs/cpp-flux { };
+
   cpp-lazy = pkgs.callPackage ./pkgs/cpp-lazy { };
 
   cpp-sort = pkgs.callPackage ./pkgs/cpp-sort { };
