@@ -1,7 +1,7 @@
 { lib, stdenv, fetchurl, fetchFromGitHub }:
 
 let
-  version = "12";
+  version = "12.1";
   nnueFile = "berserk-fb675dad41b4.nn";
   nnue = fetchurl {
     name = nnueFile;
@@ -15,7 +15,7 @@ in stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "jhonnold";
     repo = "berserk";
-    rev = "94d48b044bbad8144f7fce7a2848ac888812a1fd";
+    rev = "v${version}";
     hash = "sha256-Nlr8sdB5JulDBJcFpd4GMyvrlm6BrULZ2TPP7z/Xj7E=";
   };
 
