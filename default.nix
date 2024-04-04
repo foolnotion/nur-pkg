@@ -136,7 +136,10 @@
   qpdfview-qt6 = pkgs.qt6Packages.callPackage ./pkgs/qpdfview { };
 
   ned14-status-code = pkgs.callPackage ./pkgs/ned14-status-code { };
-  ned14-quickcpplib = pkgs.callPackage ./pkgs/ned14-quickcpplib { };
+  ned14-quickcpplib = pkgs.callPackage ./pkgs/ned14-quickcpplib {
+    byte-lite = byte-lite;
+    span-lite = span-lite;
+  };
   ned14-outcome = pkgs.callPackage ./pkgs/ned14-outcome {
     quickcpplib = ned14-quickcpplib;
     status-code = ned14-status-code;
