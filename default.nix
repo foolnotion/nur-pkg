@@ -90,6 +90,8 @@
 
   pmlb = pkgs.python3Packages.callPackage ./pkgs/pmlb { };
 
+  pmt = pkgs.callPackage ./pkgs/pmt { };
+
   q5go = pkgs.libsForQt5.callPackage ./pkgs/q5go { };
 
   scnlib = pkgs.callPackage ./pkgs/scnlib { };
