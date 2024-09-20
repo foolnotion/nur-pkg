@@ -58,7 +58,7 @@
 
   koivisto = pkgs.callPackage ./pkgs/koivisto { };
 
-  ktl = pkgs.callPackage ./pkgs/ktl { };
+  ktl = pkgs.callPackage ./pkgs/ktl { cmake-utils = cmake-utils; };
 
   lexy = pkgs.callPackage ./pkgs/lexy { };
 
