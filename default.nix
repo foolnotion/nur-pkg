@@ -80,6 +80,8 @@
 
   mppp = pkgs.callPackage ./pkgs/mppp { };
 
+  parallel-hashmap = pkgs.callPackage ./pkgs/parallel-hashmap { };
+
   pareto = pkgs.python3Packages.callPackage ./pkgs/pareto { };
 
   pegtl = pkgs.callPackage ./pkgs/pegtl { };
