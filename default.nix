@@ -30,6 +30,8 @@
 
   cmake-init = pkgs.python3Packages.callPackage ./pkgs/cmake-init { };
 
+  cmake-utils = pkgs.callPackage ./pkgs/cmake-utils { };
+
   cmaketools = pkgs.python3Packages.callPackage ./pkgs/cmaketools { };
 
   cpp-flux = pkgs.callPackage ./pkgs/cpp-flux { };
