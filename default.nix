@@ -74,6 +74,8 @@
 
   libnano = pkgs.callPackage ./pkgs/libnano { };
 
+  plutovg = pkgs.callPackage ./pkgs/plutovg { };
+
   lunasvg = pkgs.callPackage ./pkgs/lunasvg { };
 
   mathpresso = pkgs.callPackage ./pkgs/mathpresso { };
