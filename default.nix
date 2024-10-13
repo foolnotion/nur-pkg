@@ -76,7 +76,7 @@
 
   plutovg = pkgs.callPackage ./pkgs/plutovg { };
 
-  lunasvg = pkgs.callPackage ./pkgs/lunasvg { };
+  lunasvg = pkgs.callPackage ./pkgs/lunasvg { plutovg = plutovg; };
 
   mathpresso = pkgs.callPackage ./pkgs/mathpresso { };
 
