@@ -34,6 +34,8 @@
 
   cmaketools = pkgs.python3Packages.callPackage ./pkgs/cmaketools { };
 
+  copacabana = pkgs.callPackage ./pkgs/copacabana { };
+
   cpp-flux = pkgs.callPackage ./pkgs/cpp-flux { };
 
   cpp-lazy = pkgs.callPackage ./pkgs/cpp-lazy { };
@@ -61,6 +63,8 @@
   koivisto = pkgs.callPackage ./pkgs/koivisto { };
 
   ktl = pkgs.callPackage ./pkgs/ktl { cmake-utils = cmake-utils; };
+
+  kumi = pkgs.callPackage ./pkgs/kumi { inherit copacabana; };
 
   lexy = pkgs.callPackage ./pkgs/lexy { };
 
