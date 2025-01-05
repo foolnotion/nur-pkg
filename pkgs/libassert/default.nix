@@ -20,8 +20,8 @@ stdenv.mkDerivation rec {
   ] ++ cpptrace.cmakeFlags;
 
   meta = with lib; {
-    description = "Generic header-only C++14 sorting library.";
-    homepage = "https://github.com/Morwenn/cpp-sort";
+    description = "C++ assertion library";
+    homepage = "https://github.com/jeremy-rifkin/libassert";
     license = licenses.mit;
     platforms = platforms.all;
     #maintainers = with maintainers; [ foolnotion ];

@@ -13,6 +13,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ cmake ];
 
   meta = {
+    description = "Library for reading DWARF2 and DWARF formats";
     homepage = "https://github.com/davea42/libdwarf-code";
     platforms = lib.platforms.unix;
     license = lib.licenses.lgpl21Plus;
