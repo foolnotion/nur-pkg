@@ -1,13 +1,13 @@
 { lib, stdenv, fetchFromGitHub, cmake, zstd, libdwarf }:
 stdenv.mkDerivation rec {
   pname = "cpptrace";
-  version = "0.7.2";
+  version = "0.7.5";
 
   src = fetchFromGitHub {
     owner = "jeremy-rifkin";
     repo = "cpptrace";
     rev = "v${version}";
-    hash = "sha256-hGecf5BCJN4C556OGaERtkOYzpY4S5G6bw0JhInq9QY=";
+    hash = "sha256-2rDyH9vo47tbqqZrTupAOrMySj4IGKeWX8HBTGjFf+g=";
   };
 
   nativeBuildInputs = [ cmake ];
