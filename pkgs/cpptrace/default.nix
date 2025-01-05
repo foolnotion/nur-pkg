@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
   ];
 
   meta = with lib; {
-    description = "Simple, portable, and self-contained C++ stacktrace library supporting C++11 and greater";
+    description = "Simple, portable, and self-contained C++ stacktrace library";
     homepage = "https://github.com/jeremy-rifkin/cpptrace";
     license = licenses.mit;
     platforms = platforms.all;
