@@ -18,5 +18,6 @@ buildPythonPackage rec {
       homepage = "https://eli5.readthedocs.io";
       description = "Python library which allows to visualize and debug various Machine Learning models using unified API.";
       license = licenses.mit;
+      broken = true;
     };
 }
