@@ -1,16 +1,19 @@
 {
   lib,
-  autoAddDriverRunpath,
+  autoAddDriverRunpath ? null,
   cmake,
   fetchFromGitHub,
   installShellFiles,
   stdenv,
 
+  rocmSupport ? !stdenv.hostPlatform.isDarwin,
   rocmPackages ? { },
   # 6900 XT (RDNA2) by default; override per-machine, e.g. the 9060 XT (RDNA4)
   # needs its own target - confirm with `rocminfo | grep gfx` on that box
   # rather than trusting a guess here.
   rocmGpuTargets ? [ "gfx1030" ],
+
+  metalSupport ? stdenv.hostPlatform.isDarwin,
 
   fetchNpmDeps,
   nodejs_latest,
@@ -20,6 +23,9 @@
   openssl,
   ninja,
 }:
+
+assert rocmSupport -> !stdenv.hostPlatform.isDarwin;
+assert metalSupport -> stdenv.hostPlatform.isDarwin;
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "llama-cpp-prism";
@@ -52,15 +58,19 @@ stdenv.mkDerivation (finalAttrs: {
     nodejs_latest
     npmHooks.npmConfigHook
     pkg-config
+  ]
+  ++ lib.optionals rocmSupport [
     autoAddDriverRunpath
     rocmPackages.clr
   ];
 
   buildInputs = [
+    openssl
+  ]
+  ++ lib.optionals rocmSupport [
     rocmPackages.clr
     rocmPackages.hipblas
     rocmPackages.rocblas
-    openssl
   ];
 
   npmRoot = "tools/ui";
@@ -90,9 +100,16 @@ stdenv.mkDerivation (finalAttrs: {
     (lib.cmakeBool "LLAMA_BUILD_TESTS" false)
     (lib.cmakeBool "LLAMA_OPENSSL" true)
     (lib.cmakeBool "BUILD_SHARED_LIBS" true)
-    (lib.cmakeBool "GGML_HIP" true)
+    (lib.cmakeBool "GGML_HIP" rocmSupport)
+    (lib.cmakeBool "GGML_METAL" metalSupport)
+  ]
+  ++ lib.optionals rocmSupport [
     (lib.cmakeFeature "CMAKE_HIP_COMPILER" "${rocmPackages.clr.hipClangPath}/clang++")
     (lib.cmakeFeature "CMAKE_HIP_ARCHITECTURES" (builtins.concatStringsSep ";" rocmGpuTargets))
+  ]
+  ++ lib.optionals metalSupport [
+    (lib.cmakeFeature "CMAKE_C_FLAGS" "-D__ARM_FEATURE_DOTPROD=1")
+    (lib.cmakeBool "LLAMA_METAL_EMBED_LIBRARY" true)
   ];
 
   postInstall = ''
@@ -107,6 +124,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/PrismML-Eng/llama.cpp";
     license = lib.licenses.mit;
     mainProgram = "llama-cli";
-    platforms = lib.platforms.linux;
+    platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
 })
