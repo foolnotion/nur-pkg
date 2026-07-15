@@ -127,6 +127,10 @@ rec {
 
   linasm = pkgs.callPackage ./pkgs/linasm { };
 
+  llama-cpp-prism = pkgs.callPackage ./pkgs/llama-cpp-prism {
+    inherit (pkgs) rocmPackages;
+  };
+
   plutovg = pkgs.callPackage ./pkgs/plutovg { };
 
   lunasvg = pkgs.callPackage ./pkgs/lunasvg { plutovg = plutovg; };
