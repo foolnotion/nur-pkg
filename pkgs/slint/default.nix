@@ -11,6 +11,7 @@
   libxi,
   libxkbcommon,
   ninja,
+  patchelf,
   pkg-config,
   rustPlatform,
   rustc,
@@ -43,7 +44,8 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     rustPlatform.cargoSetupHook
     rustc
-  ];
+  ]
+  ++ lib.optional stdenv.hostPlatform.isLinux patchelf;
 
   buildInputs = [
     fontconfig
@@ -67,6 +69,19 @@ stdenv.mkDerivation (finalAttrs: {
   # Corrosion forwards GNU Make's jobserver flags to Cargo. Slint's bundled
   # compiler builds jemalloc, whose generated Makefile rejects those flags.
   cmakeGenerator = "Ninja";
+
+  postFixup = lib.optionalString stdenv.hostPlatform.isLinux ''
+    patchelf --add-rpath ${
+      lib.makeLibraryPath [
+        libGL
+        libx11
+        libxcursor
+        libxi
+        libxkbcommon
+        wayland
+      ]
+    } $out/lib/libslint_cpp.so
+  '';
 
   meta = {
     description = "Declarative GUI toolkit for C++ applications";
